@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- saved from url=(0093)file:///C:/Users/NITHYASRI/Downloads/Nithyashree%20S%20_%20AR_VR%20Developer%20Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nithyashree S | AR/VR Developer Portfolio</title>
+  <style>
+    :root {
+      --ink: #17191f;
+      --muted: #59606b;
+      --line: #e4dde3;
+      --paper: #fff9f4;
+      --panel: #ffffff;
+      --coral: #ef7a68;
+      --teal: #116466;
+      --plum: #4b244a;
+      --lime: #d8e888;
+      --sky: #cce7ff;
+      --shadow: 0 18px 46px rgba(50, 35, 45, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, rgba(204, 231, 255, 0.65), transparent 28%),
+        linear-gradient(315deg, rgba(216, 232, 136, 0.48), transparent 32%),
+        var(--paper);
+      line-height: 1.55;
+    }
+
+    img, video { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .shell { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(23, 25, 31, 0.08);
+      background: rgba(255, 249, 244, 0.86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 20px;
+    }
+
+    .brand { font-weight: 850; }
+    .navlinks { display: flex; align-items: center; gap: 18px; color: var(--muted); font-size: .94rem; font-weight: 700; }
+    .navlinks a:hover { color: var(--plum); }
+
+    .hero {
+      min-height: calc(100vh - 68px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(300px, .78fr);
+      gap: 48px;
+      align-items: center;
+      padding: 54px 0 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 14px;
+      color: var(--teal);
+      font-size: .83rem;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .eyebrow::before { content: ""; width: 34px; height: 3px; background: var(--coral); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin-bottom: 18px; font-size: clamp(2.55rem, 6vw, 5.2rem); line-height: .98; letter-spacing: 0; }
+    .intro { max-width: 650px; color: #505965; font-size: clamp(1.02rem, 2vw, 1.22rem); }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border: 1px solid var(--plum); border-radius: 8px; font-weight: 850; background: var(--plum); color: #fff; }
+    .button.secondary { background: transparent; color: var(--plum); }
+
+    .portrait-frame {
+      position: relative;
+      border-radius: 8px;
+      padding: 14px;
+      background: linear-gradient(145deg, var(--coral), var(--sky) 52%, var(--lime));
+      box-shadow: var(--shadow);
+    }
+
+    .portrait-frame::after {
+      content: "AR / VR";
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .88);
+      color: var(--plum);
+      font-size: .83rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+    }
+
+    .portrait {
+      width: 100%;
+      min-height: 520px;
+      height: min(68vh, 680px);
+      object-fit: cover;
+      object-position: center;
+      border-radius: 6px;
+    }
+
+    section { padding: 72px 0; border-top: 1px solid rgba(23, 25, 31, .08); }
+    .section-head { display: grid; grid-template-columns: minmax(210px, .34fr) minmax(0, .66fr); gap: 30px; margin-bottom: 30px; }
+    .section-head h2 { margin-bottom: 0; font-size: clamp(1.75rem, 4vw, 3rem); line-height: 1.05; }
+    .section-head p { max-width: 760px; margin-bottom: 0; color: var(--muted); font-size: 1.04rem; }
+
+    .about-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .stat { min-height: 126px; padding: 20px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255, 255, 255, .82); box-shadow: 0 8px 26px rgba(50, 35, 45, .06); }
+    .stat strong { display: block; margin-bottom: 8px; font-size: 1.45rem; color: var(--plum); }
+    .stat span { color: var(--muted); font-weight: 650; }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip { border: 1px solid var(--line); border-radius: 8px; padding: 10px 13px; background: #fff; color: #344047; font-weight: 780; box-shadow: 0 8px 20px rgba(50, 35, 45, .05); }
+
+    .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .project { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); box-shadow: 0 12px 30px rgba(50, 35, 45, .09); }
+    .project img, .project video { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; background: #edf0ec; }
+    .project-body { padding: 18px; }
+    .tag { display: inline-block; margin-bottom: 9px; color: var(--teal); font-size: .77rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; }
+    .project h3 { margin-bottom: 8px; font-size: 1.15rem; line-height: 1.2; }
+    .project p { margin-bottom: 0; color: var(--muted); font-size: .96rem; }
+
+    .resume-layout { display: grid; grid-template-columns: minmax(0, .42fr) minmax(320px, .58fr); gap: 28px; align-items: start; }
+    .resume-notes { display: grid; gap: 14px; }
+    .note { padding: 18px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .note h3 { margin-bottom: 6px; font-size: 1rem; color: var(--plum); }
+    .note p { margin-bottom: 0; color: var(--muted); }
+    .resume-image { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #fff; box-shadow: var(--shadow); }
+    .resume-image img { width: 100%; height: auto; }
+
+    .contact-band { background: linear-gradient(135deg, var(--plum), var(--teal)); color: #fff; }
+    .contact-band .section-head p { color: rgba(255, 255, 255, .76); }
+    .contact-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .contact-item { min-height: 104px; padding: 18px; border: 1px solid rgba(255, 255, 255, .20); border-radius: 8px; background: rgba(255, 255, 255, .08); }
+    .contact-item span { display: block; margin-bottom: 8px; color: rgba(255, 255, 255, .68); font-size: .83rem; font-weight: 850; text-transform: uppercase; letter-spacing: .06em; }
+    .contact-item strong { overflow-wrap: anywhere; font-size: 1.02rem; }
+
+    footer { padding: 26px 0; background: #221124; color: rgba(255, 255, 255, .78); font-size: .94rem; }
+
+    @media (max-width: 920px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 14px 0; }
+      .navlinks { width: 100%; overflow-x: auto; padding-bottom: 2px; }
+      .hero, .section-head, .resume-layout { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding-top: 36px; }
+      .portrait { min-height: 440px; height: auto; }
+      .about-grid, .projects, .contact-list { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 22px, 1160px); }
+      .navlinks { gap: 12px; font-size: .88rem; }
+      .about-grid, .projects, .contact-list { grid-template-columns: 1fr; }
+      .portrait { min-height: 420px; }
+      section { padding: 52px 0; }
+      .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="http://127.0.0.1:8123/nithyashree-portfolio.html#home">Nithyashree S</a>
+      <div class="navlinks">
+        <a href="http://127.0.0.1:8123/nithyashree-portfolio.html#about">About</a>
+        <a href="http://127.0.0.1:8123/nithyashree-portfolio.html#skills">Skills</a>
+        <a href="http://127.0.0.1:8123/nithyashree-portfolio.html#projects">Projects</a>
+        <a href="http://127.0.0.1:8123/nithyashree-portfolio.html#resume">Resume</a>
+        <a href="http://127.0.0.1:8123/nithyashree-portfolio.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <div class="shell hero">
+      <div>
+        <p class="eyebrow">AR/VR Developer and 3D Modelist</p>
+        <h1>Turning ideas into interactive experiences.</h1>
+        <p class="intro">I am Nithyashree, a student and aspiring AR/VR developer from Coimbatore, India. I create 3D models, AR applications, Unity games, and user-friendly immersive experiences using Blender, C#, and interactive design.</p>
+        <div class="hero-actions">
+          <a class="button" href="http://127.0.0.1:8123/nithyashree-portfolio.html#projects">View Projects</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/nithya-shree-senthil-kumar-45a22631a?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android">LinkedIn</a>
+        </div>
+      </div>
+      <div class="portrait-frame">
+        <img class="portrait" alt="Nithyashree portrait" src="./Nithyashree S _ AR_VR Developer Portfolio_files/portrait.jpeg">
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="shell">
+        <div class="section-head"><h2>About</h2><p>I focus on practical, visually engaging immersive projects that combine creativity and technology. My learning path includes Unity development, Blender modeling and rendering, AR/VR concepts, UI/UX design, and C# programming.</p></div>
+        <div class="about-grid">
+          <div class="stat"><strong>B.Sc.</strong><span>Augmented Reality and Virtual Reality student</span></div>
+          <div class="stat"><strong>Unity</strong><span>Game development and scene design</span></div>
+          <div class="stat"><strong>Blender</strong><span>3D modeling, materials, lighting, and rendering</span></div>
+          <div class="stat"><strong>Goal</strong><span>Create useful, impactful immersive technology</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="shell">
+        <div class="section-head"><h2>Skills</h2><p>A focused toolset for building interactive digital experiences, from concept and modeling to gameplay scripting and interface design.</p></div>
+        <div class="skills" aria-label="Technical skills"><span class="chip">Unity</span><span class="chip">Blender</span><span class="chip">AR Development</span><span class="chip">VR Concepts</span><span class="chip">3D Modeling</span><span class="chip">C# Programming</span><span class="chip">UI/UX Design</span><span class="chip">Scene Design</span><span class="chip">Rendering</span><span class="chip">Adobe Photoshop</span><span class="chip">Premiere Pro</span><span class="chip">Problem Solving</span><span class="chip">Team Collaboration</span></div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="shell">
+        <div class="section-head"><h2>Projects</h2><p>Selected completed works including Unity game videos, Blender product models, and interior 3D design. The resume preview has been removed from this section.</p></div>
+        <div class="projects">
+          <article class="project"><video controls="" preload="metadata" poster="assets/living-room.png"><source src="assets/timmy-game.mp4" type="video/mp4"></video><div class="project-body"><span class="tag">3D Game</span><h3>Timmy Game</h3><p>3D game project demo showing interactive gameplay practice, scene setup, and Unity-based game development skills.</p></div></article>
+          <article class="project"><video controls="" preload="metadata" poster="assets/living-room.png"><source src="assets/game-demo.mp4" type="video/mp4"></video><div class="project-body"><span class="tag">Unity Game</span><h3>Beginner Interactive Game Demo</h3><p>Built a simple interactive game experience using Unity and C#, applying player movement, object interaction, and basic game mechanics.</p></div></article>
+          <article class="project"><img alt="Pink backpack product design in Blender" src="./Nithyashree S _ AR_VR Developer Portfolio_files/backpack.jpg"><div class="project-body"><span class="tag">Blender Product Design</span><h3>Personalized Backpack Model</h3><p>Created a detailed 3D backpack with custom text, rounded forms, pockets, straps, materials, lighting, and presentation render setup.</p></div></article>
+          <article class="project"><img alt="Red rotary phone 3D model" src="./Nithyashree S _ AR_VR Developer Portfolio_files/rotary-phone.jpg"><div class="project-body"><span class="tag">3D Modeling</span><h3>Retro Rotary Telephone</h3><p>Modeled a classic telephone form with glossy red material, dial detailing, object proportions, and controlled camera composition.</p></div></article>
+          <article class="project"><img alt="Living room interior 3D isometric model" src="./Nithyashree S _ AR_VR Developer Portfolio_files/living-room.png"><div class="project-body"><span class="tag">Interior Design</span><h3>Living Room 3D Interior</h3><p>Designed a complete isometric living room scene with furniture, decorative elements, soft colors, lighting, and material adjustments.</p></div></article>
+          <article class="project"><img alt="Nithyashree AR VR practice profile" src="./Nithyashree S _ AR_VR Developer Portfolio_files/portrait.jpeg"><div class="project-body"><span class="tag">AR/VR Learning</span><h3>Immersive Technology Practice</h3><p>Continuously exploring AR/VR development, interactive design, scene building, and creative workflows for future immersive applications.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="shell">
+        <div class="section-head"><h2>Resume</h2><p>A placement-focused summary based on the uploaded resume, highlighting education, development interests, Blender experience, Unity practice, and soft skills.</p></div>
+        <div class="resume-layout">
+          <div class="resume-notes"><div class="note"><h3>Education</h3><p>Bachelor of Science in Augmented Reality and Virtual Reality at Avinashilingam University. Currently in 2nd year.</p></div><div class="note"><h3>Experience</h3><p>Product design in Blender, living room interior modeling, beginner Unity game development, and 3D game practice.</p></div><div class="note"><h3>Certificates</h3><p>No separate certificate files were included in the upload. This section is ready to add certificates when available.</p></div></div>
+          <a class="resume-image" href="./Nithyashree S _ AR_VR Developer Portfolio_files/resume.jpeg" aria-label="Open resume image"><img alt="Nithyashree resume" src="./Nithyashree S _ AR_VR Developer Portfolio_files/resume.jpeg"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-band">
+      <div class="shell">
+        <div class="section-head"><h2>Contact</h2><p>Available for placement opportunities, internships, and beginner-friendly AR/VR, Unity, Blender, and interactive design work.</p></div>
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:nithyashree1045@gmail.com"><span>Email</span><strong>nithyashree1045@gmail.com</strong></a>
+          <a class="contact-item" href="tel:+917010853088"><span>Mobile</span><strong>+91 70108 53088</strong></a>
+          <a class="contact-item" href="https://www.linkedin.com/in/nithya-shree-senthil-kumar-45a22631a?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android"><span>LinkedIn</span><strong>nithya-shree-senthil-kumar</strong></a>
+          <div class="contact-item"><span>Location</span><strong>Coimbatore, India</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="shell">Nithyashree S | AR/VR Developer Portfolio</div></footer>
+
+</body></html>
